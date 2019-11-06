@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int angka;
+int angka,lp;
 string converter(int bilangan);
 string smInt(int bilangan);
 string mdInt(int bilangan);
@@ -13,7 +13,8 @@ int main ()
     cout << "Masukkan bilangan (1-2000000000) : ";
     cin >> angka;
     string xd = xlInt(angka);
-    cout << xd;
+    cout << xd << "\n";
+    
     return 0;
 }
 
@@ -71,7 +72,7 @@ string xlInt(int bilangan)
     int num;
     string text = "";
 
-    if (2000000000 >= bilangan && bilangan >= 1000000000)
+    if (2147483647 >= bilangan && bilangan >= 1000000000)
     {
         num = 1000000000;
         int hasil = bilangan / num;
