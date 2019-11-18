@@ -225,8 +225,6 @@ string smInt(int bilangan)
     if (9 >= bilangan && bilangan >= 1)
     {
         text += converter(bilangan);
-    }else{
-        text += "Nol";
     }
 
     // x = smInt(angka);
