@@ -11,7 +11,7 @@ int main ()
     {
     	if (ar[i] == n) // cek anggka yang dicari
     	{
-    		cout << "angka " << sc << " ditemukan di index " << i+1; // tampilkan text bila ditemukan 
+    		cout << "angka " << sc << " ditemukan di index " << i; // tampilkan text bila ditemukan 
     		break; // stop program
     	}
     }
