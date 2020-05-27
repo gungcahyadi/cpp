@@ -43,21 +43,21 @@ int main()
 	cin >> nilai;
 	cout << "\n";
 
-    while(start <= finish) {
+	while(start <= finish) {
         middle = (start + finish) / 2;  // 4
 
         if (nilai > data[middle])
         {
-            start = middle + 1;
+        	start = middle + 1;
         }
         else if (nilai < data[middle])
         {
-            finish = middle - 1;
+        	finish = middle - 1;
         }
         else if (nilai == data[middle])
         {
-            cout << "Data ditemukan pada index ke " << middle;
-            break;
+        	cout << "Data ditemukan pada index ke " << middle;
+        	break;
         }
         
         if (middle >= 8)

@@ -2,19 +2,24 @@
 #include <cstdlib>
 #include <string>
 using namespace std;
+char opsi;
 string nama[5],nilai[5],hasil[5];
 double tugas[5],quiz[5],uts[5],uas[5],absen=90.10,total[5]; 
+int i = 0;
 
-int main ()
-{
-
-	system("clear");
+void head(){
 	cout << "Nama 	: Anak Agung Gede Cahyadi Putra Palguna \n";
 	cout << "NIM 	: 190030462\n";
 	cout << "-------------------------------------\n";
+}
 
-	for (int i = 0; i < 5; ++i)
-	{
+int main ()
+{	
+	do
+	{			
+		system("clear");
+		head();
+
 		// input data
 		cout << "Nama Mahasiswa : ";
 		cin >> nama[i];
@@ -26,7 +31,9 @@ int main ()
 		cin >> uts[i];
 		cout << "UAS : ";
 		cin >> uas[i];
-		cout << "\n-------------------------------------\n";		
+		cout << "\n-------------------------------------\n";
+		system("clear");
+		head();
 
 		// formula
 		total[i] = (tugas[i] * 0.1) + (quiz[i] * 0.1) + (uts[i] * 0.25) + (uas[i] * 0.40) + (absen * 0.15);
@@ -49,12 +56,12 @@ int main ()
 		else if (56 > total[i] && total[i] >= 41)
 		{
 			nilai[i] = "D";
-			hasil[i] = "Gagal";
+			hasil[i] = "Tidak Lulus";
 		}
 		else 
 		{
 			nilai[i] = "E";
-			hasil[i] = "Gagal";
+			hasil[i] = "Tidak Lulus";
 		}
 
 		
@@ -69,9 +76,16 @@ int main ()
 		cout << "\nAnda " << hasil[i];
 		cout << "\nNilai Anda " << total[i] << " | " << nilai[i];
 		cout << "\n-------------------------------------\n";
-		
-	}
 
+		i = i + 1;
+
+		cout << "Lanjut ? ('Y')";
+		cin >> opsi;
+
+	} while( i < 5 && opsi == 'Y');
+
+	system("clear");
+	head();
 	cout << "Daftar nilai dalam array\n";
 	cout << "-------------------------------------\n";
 
@@ -80,8 +94,6 @@ int main ()
 		cout << "19001000" << i+1 << " : " << total[i] << " | " << nilai[i] << "\n";
 	}
 	cout << "-------------------------------------\n";
-
-
 
 	return 0;
 }
